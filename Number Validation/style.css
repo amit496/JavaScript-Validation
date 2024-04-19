@@ -1,0 +1,87 @@
+
+    @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+    * 
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    body
+    {
+        background: aliceblue;
+    }
+    .card
+    {
+        width: 60%;
+        margin: 10px auto;
+        background: #fff;
+    }
+    .wrapper
+    {
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+        background: linear-gradient(-135deg, #c850c0, #4158d0);
+    }
+    .title
+    {
+        color: #fff;
+        text-shadow:  0 0 10px #fff;
+        text-align: center;
+    }
+    .field
+    {
+        height: 50px;
+        width: 100%;
+        margin-top: 20px;
+        position: relative;
+    }
+    .field input.form-control
+    {
+        height: 100%;
+        width: 100%;
+        box-shadow: none;
+        outline: none;
+        font-size: 17px;
+        padding-left: 20px;
+        border: 1px solid lightgrey;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+    }
+    .field input.form-control:focus,
+    .field input.form-control:valid
+    {
+    border-color: #4158d0;
+    }
+    .field label
+    {
+        position: absolute;
+        top: 50%;
+        left: 20px;
+        color: #999999;
+        font-weight: 400;
+        font-size: 17px;
+        pointer-events: none;
+        transform: translateY(-50%);
+        transition: all 0.3s ease;
+    }
+    .field input.form-control:focus ~ label,
+    .field input.form-control:valid ~ label
+    {
+        top: 0%;
+        font-size: 16px;
+        color: #4158d0;
+        background: #fff;
+        transform: translateY(-50%);
+    }
+    .field button 
+    {
+        border: none;
+        outline: none;
+        background: linear-gradient(-135deg, #c850c0, #4158d0);   
+    }
+    .error-row
+    {
+        display: none;
+    }
