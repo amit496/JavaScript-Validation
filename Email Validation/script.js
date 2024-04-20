@@ -1,27 +1,20 @@
-    function validation()
+function validation()
     {
         // get the input box value
-        let inputVal = document.getElementById('name').value.trim();
+        let inputVal = document.getElementById('email').value;
         // Regex value
-        let nameRegex = /^[a-zA-Z\s]+$/;
+        let emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
         // Conditions
-        if (inputVal === '')
+        if (inputVal == '')
         {
-            document.getElementById('error').innerText = "Please enter the name.";
+            document.getElementById('error').innerText = "Please enter the email.";
             document.getElementById('errorRow').style.display = "block";
             hideError();
             return false;
         }
-        else if (inputVal.length < 3)
+        else if (!emailRegex.test(inputVal))
         {
-            document.getElementById('error').innerText = "Please enter a valid name with at least 3 characters.";
-            document.getElementById('errorRow').style.display = "block";
-            hideError();
-            return false;
-        }
-        else if (!nameRegex.test(inputVal))
-        {
-            document.getElementById('error').innerText = "Please enter a valid name with only alphabetic characters.";
+            document.getElementById('error').innerText = "Please enter a valid email.";
             document.getElementById('errorRow').style.display = "block";
             hideError();
             return false;
